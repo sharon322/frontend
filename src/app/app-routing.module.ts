@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'upoad-csv',
+    redirectTo: 'upload-csv',
     pathMatch: 'full'
   },
   {
