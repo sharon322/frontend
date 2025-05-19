@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Subir Archivo CSV</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cargar CSV (Pilas y Colas)</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <input type="file" accept=".csv" (change)="onFileSelected($event)" />
+      <ion-button (click)="subirArchivo()" [disabled]="!archivoSeleccionado">
+        Subir
+      </ion-button>
+      <p>{{ mensaje }}</p>
+
+      <div *ngIf="imagenes.length > 0">
+        <h3>Imágenes Generadas</h3>
+        <ion-list>
+          <ion-item *ngFor="let imagen of imagenes">
+            <img [src]="imagen" alt="Estructura de datos" style="max-width: 100%; margin: 10px 0;" />
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

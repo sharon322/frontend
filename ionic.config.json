@@ -1,0 +1,7 @@
+{
+  "name": "estructuras-visualizer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
